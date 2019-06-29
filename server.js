@@ -1,9 +1,13 @@
 const express = require('express'),
     app = express(),
+    port = process.env.PORT || 3000,
     mongoose = require('mongoose'),
     //Models;
     Destination = require('./api/models/Destination'),
     bodyParser = require('body-parser');
+//Environment Variables
+require('dotenv').config();
+
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
@@ -19,8 +23,8 @@ app.get('/', (req, res) => {
     })
 });
 
-app.listen(3000, () => {
-    mongoose.connect('mongodb://localhost:27017/HikeathonDB');
+app.listen(port, () => {
+    mongoose.connect(process.env.MONGODB_URI)
 
     mongoose.connection
         .once('open', () => {
