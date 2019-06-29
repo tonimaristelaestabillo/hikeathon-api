@@ -1,0 +1,33 @@
+{
+  "name": "hikeathon-api",
+  "version": "1.0.0",
+  "description": "RESTFul API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aeonflux/hikeathon-api.git"
+  },
+  "keywords": [
+    "API"
+  ],
+  "author": "Toni Estabillo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aeonflux/hikeathon-api/issues"
+  },
+  "homepage": "https://github.com/aeonflux/hikeathon-api#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.2"
+  },
+  "engines": {
+    "node": "8.11.4"
+  }
+}
