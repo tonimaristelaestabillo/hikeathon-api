@@ -24,6 +24,11 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
+    // For Local Testing
+    // Use RoboMongo
+    // mongoose.connect('mongodb://localhost:27017/HikeathonDB', { useNewUrlParser: true });
+
+    // Heroku API
     mongoose.connect(process.env.MONGODB_URI)
 
     mongoose.connection
